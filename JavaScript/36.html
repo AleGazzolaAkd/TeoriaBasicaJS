@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+//TEXTAREA
+function ConfirmarTexto()
+{
+if (document.getElementById("textolargo").value.lenght>500)
+{ 
+alert("Texto largo, debe ser menor a 500 caracteres.");
+}
+else
+{
+alert("Todo correcto.");
+}
+}
+</script>
+<form>
+<textarea id="textolargo" rows="20" cols="50"></textarea>
+<br>
+<input type="button" value="Mostrar" onClick="ConfirmarTexto()">
+</form>
+</body>
+</html>

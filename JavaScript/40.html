@@ -1,0 +1,88 @@
+<html>
+<head>
+</head>
+<body onLoad="Cargar()">
+<script type="text/javascript">
+
+	 function Cargar()
+	 {
+	     document.getElementById('nombre').focus();
+	 }
+	 
+	 function CambiaColor(control)
+	 {
+	     control.style.backgroundColor = "cyan";
+	 }
+	 
+	 function Reset(control)
+	 {
+	     control.style.backgroundColor = "white";
+	 }
+	 
+	 function CompruebaDatos()
+	 {
+		var b = true;
+		
+		if (document.getElementById('nombre').value == "")
+		{
+			b = false;
+		}
+		
+		if (document.getElementById('edad').value == "")
+		{
+			b = false;
+		}
+		
+		if (document.getElementById('radio1').checked == false && document.getElementById('radio2').checked == false)
+		{
+			b = false;
+		}
+		
+		if (b == true)
+		{
+		    document.getElementById('comprueba').value = "Todos los datos rellenos";
+		}
+		else
+		{
+			document.getElementById('comprueba').value = "Faltan datos por rellenar";
+		}
+	 
+	 }
+	 
+	 
+	 function Vaciar()
+	 {
+		document.getElementById('comprueba').value = "";
+	 }
+	 
+	 
+	 function MuestraDatos()
+	 {
+		var sexo = "";
+		
+		if (document.getElementById('radio1').checked)
+		{
+			sexo = "Hombre";
+		}
+		else
+		{
+			sexo = "Mujer";
+		}
+	 
+		alert("Nombre: " +  document.getElementById('nombre').value + "\n" 
+		+ "Edad: " +  document.getElementById('edad').value + "\n"
+		+ "Sexo: " + sexo);
+	 }
+	 
+	 
+</script>
+<form>
+Nombre: <input type="text" id="nombre" onFocus="CambiaColor(this)" onBlur="Reset(this)"><br>
+Edad: <input type="text" id="edad" onFocus="CambiaColor(this)" onBlur="Reset(this)"><br>
+Sexo: <input type="radio" id="radio1" name="grupo">Hombre <input type="radio" id="radio2" name="grupo">Mujer<br><br>
+<input type="button" value="Comprueba Datos" onMouseOver="CompruebaDatos()" onMouseOut="Vaciar()"> <input type="text" id="comprueba"><br><br>
+<input type="button" value="Mostrar Datos" onClick="MuestraDatos()">
+<br>
+</form>
+</body>
+</html>

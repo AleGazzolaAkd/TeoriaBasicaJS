@@ -1,0 +1,37 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+
+    function PropiedadesSelect()
+	{ 
+    var texto; 
+    texto = "El numero de opciones del select: " + document.formul.Select.length;
+	
+    var indice = document.formul.Select.selectedIndex; 
+    texto += "\nIndice de la opcion escogida: " + indice; 
+	
+	var valor = document.formul.Select.options[indice].value;
+    texto += "\nValor de la opcion escogida: " + valor;
+   
+    var textoEscogido = document.formul.Select.options[indice].text; 
+    texto += "\nTexto de la opcion escogida: " + textoEscogido; 
+    alert(texto);
+    }
+	
+	</script>
+<form name="formul">
+Opina sobre este curso:
+<select name="Select">
+<option value="10">Muy bueno
+<option value="5" selected>Regular
+<option value="0">Muy malo
+</select>
+<br>
+<br>
+<input type=button value="Propiedades" onclick="PropiedadesSelect()">
+</form>
+</script>
+</body>
+</html>

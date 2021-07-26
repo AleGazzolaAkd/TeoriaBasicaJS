@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+
+    function vaciar(control)
+	{
+	  control.value = '';
+	}
+	
+	function verificarEntrada(control)
+	{
+		alert('Este control ha perdido el foco.');
+	}
+</script>
+<form>
+Nombre: <input type="text" id="nombre" onFocus="vaciar(this)" onBlur="verificarEntrada(this)" value="nombre"><br>
+<br>
+</form>
+</body>
+</html>

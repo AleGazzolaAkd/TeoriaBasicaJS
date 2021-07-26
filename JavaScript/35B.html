@@ -1,0 +1,37 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+//CHECKBOX
+    function contarSeleccionados()
+	{
+	  var cant = 0;
+	  if (document.getElementById('checkbox1').checked)
+	  {
+		cant++;
+	  }
+	  if (document.getElementById('checkbox2').checked)
+	  {
+		cant++;
+	  }
+	  if (document.getElementById('checkbox3').checked)
+	  {
+		cant++;
+	  }
+
+	  alert('Tiene ' + cant + ' intereses');
+	}
+</script>
+<form>
+<input type="checkbox" id="checkbox1">Coches
+<br>
+<input type="checkbox" id="checkbox2">Musica
+<br>
+<input type="checkbox" id="checkbox3">Videojuegos
+<br>
+<br>
+<input type="button" value="Mostrar" onClick="contarSeleccionados()">
+</form>
+</body>
+</html>
